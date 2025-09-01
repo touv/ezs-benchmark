@@ -22,7 +22,7 @@ Le programme `test.sh` permet de tester un seul script (paramètre 1) en faisant
 
 ### Scripts
 
-Si le traitement réalisé est toujours le même `shared.ini` la manière de la faire peut-être écrite de différentes manières. cf. [./scripts](./scripts)
+Si le traitement réalisé est toujours le même `shared.ini` la manière de le faire peut être écrite de différentes manières. cf. [./scripts](./scripts)
 
 ### Nombre de documents
 
