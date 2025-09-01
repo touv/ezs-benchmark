@@ -22,11 +22,11 @@ Le programme `test.sh` permet de tester un seul script (paramètre 1) en faisant
 
 ### Scripts
 
-Si le traitement réalisé est toujours le même `shared.ini` la manière de la faire peut-être écrite de différentes manières.
+Si le traitement réalisé est toujours le même `shared.ini` la manière de la faire peut-être écrite de différentes manières. cf. [./scripts](./scripts)
 
 ### Nombre de documents
 
-LE volume de données testable est 1 document, 10 documents, 20 documents et 100 documents
+Le volume de données testable est : 1 document, 10 documents, 20 documents et 100 documents
 
 ### Nombre d'exécutions parallèles
 
@@ -38,17 +38,18 @@ L'usage de nvm permet de choisir avant le lancement du script la version de node
 
 ### Configuration Server EZS
 
-Le serveur EZS peut être configuré en ligne de commandes ou avec des variables d’environnement. Les paramètres disponibles sont :
+Le serveur EZS peut être configuré en ligne de commandes ou avec des variables d’environnement. Les paramètres/variables disponibles sont :
 
 #### EZS_MAIN_STATEMENT 
 
 Permet de modifier l'instruction qui sera utilisée pour exécuter le script demandé. Par défaut,  [delegate] est utilisé 
+Ce paramètre peut-être modifier directment par le programme ` stress.sh`
 
 #### EZS_NSHARDS
 
 Permet de modifier le nombre de documents en mémoire tampon.
 
-Ce paramètre à peu d'influence.
+Ce paramètre à peu d'influence. 
 
 #### EZS_CONCURRENCY
 
