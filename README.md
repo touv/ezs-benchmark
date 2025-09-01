@@ -4,7 +4,7 @@
 
 
 
-Ce benchmark consiste à mesurer l'impact en temps de réponse et de traitement es en fonction de deux éléments. D'un côté la manière d'opérer son traitement et de l'autre les paramètres choisis pour configurer son exécution.
+Ce benchmark consiste à mesurer les  temps de réponse et de traitement ezs en fonction de deux éléments, d'un côté la manière d'opérer son traitement et de l'autre les paramètres choisis pour configurer son exécution.
 
 Le programme `stress.sh` permet de lancer et mesurer  la rapidité d'un traitement sur un script donné (paramètre 3)  en fonction d'un nombre de documents à traiter (paramètre 1) et d'un nombre de répétitions en parallèle  (paramètre 2). Le paramètre 4 permet de modifier la configuration du serveur et notamment, la manière dont celui-ci va exécuter le script donné (paramètre 3).
 
@@ -16,11 +16,7 @@ C'est également le cas, pour évaluer les résultats avec une version différen
 
 Le programme `bench.sh` permet de lancer plusieurs fois le programme précédent avec différents paramètres.
 
-
-
-Le programme `test.sh` permet de tester un seul script (paramètre 1) en faisant varier le nombre de document (paramètre 2).
-
-
+Le programme `test.sh` permet de tester un seul script (paramètre 1) en faisant varier le nombre de documents (paramètre 2). Pour ce  programme, le serveur ezs doit être lancé préalablement. 
 
 ## Paramètres testables
 
@@ -65,6 +61,12 @@ Ce paramètre a peu d'influence, sauf dans le cas de l’usage de l’instructio
 Permet de modifier l'encodage des données lors d'un échange externe (requête http client/serveur & serveur/client) et interne échange entre threads ou en entre process. Par défaut, Gzip est utilisé pour encoder les données
 
 # Résultats
+
+### TL;DR
+
+Sans surprise , la version 24 de NodeJS obtient de meilleure performance que la version 20. Pour la configuration du serveur, la désactivation de l'encoding permet d'obtenir un  gain de performance constant et reproductible (ce qui ne semble pas être le cas avec les autres paramètres)
+
+Concernant le script,  l'usage conjoint des instructions [parallel] et [detach] améliore significativement les performances à mesure que le nombre de documents à traiter est important. Avec peu de documents et peu de trafic, l'usage par défaut reste rapide, ce qui est logique dans le  sens où l'usage de [parallel] et [detach] a pour objectif de paralléliser le traitement de plusieurs documents en même temps
 
 ## avec Node version 20, et la configuration par défaut du serveur ezs.
 
