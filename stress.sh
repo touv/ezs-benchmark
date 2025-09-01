@@ -8,7 +8,7 @@ OUTPUT=""
 HOST="http://localhost:31976"
 ENTRYPOINT="/${SCRIPT}"
 NODE_VERSION=`node -v`
-MAIN_STATEMENT="${4-delegate}"
+MAIN_STATEMENT="${4:-delegate}"
 HORODATAGE=`date "+%F | %T"`
 
 if [ ! -f "${INPUT}" ]; then
