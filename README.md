@@ -54,7 +54,9 @@ Ce paramètre à peu d'influence.
 
 Règle plusieurs traitements, dont la taille de file d'attente des documents à traiter, qui est ensuite traitée en parallèle.
 
-Ce paramètre a peu d'influence, sauf dans le cas de l’usage de l’instruction [exec] et la gestion de processus parallèles.
+Ce paramètre est par défaut égale au nombre de CPUs disponible sur la machine. 
+
+Il semblerait que l'on obtient de meilleur résultat en réduisant ce paramètre. Par exemple, dan sle script pd.ini la valeur été volontairement surchargées pour être fixer arbitrairement à 5.
 
 #### EZS_ENCODING
 
